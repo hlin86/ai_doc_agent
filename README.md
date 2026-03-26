@@ -40,6 +40,7 @@ Which SSD has the largest capacity?
 System Behavior:
 
 Extracts table data from document
+
 Applies structured reasoning (max comparison)
 
 Answer:
@@ -61,27 +62,39 @@ Why This Approach?
 LLMs alone can:
 
 struggle with tables and numbers
+
 generate incorrect or hallucinated answers
 
 This system improves reliability by:
 
 combining deterministic logic with LLMs
+
 grounding responses in retrieved documents
+
 validating outputs before returning them
 
 Tech Stack
+
 Python
+
 Hugging Face Transformers
+
 Sentence Transformers (embeddings)
+
 PDF parsing (pdfplumber)
 
 Future Improvements
+
 Stronger LLM integration
+
 Improved hallucination detection
+
 Scalable deployment (API / service architecture)
+
 Better evaluation metrics
 
 Author
 
 Hugo Lin
+
 M.S. Computer Science (NLP / AI), UC Santa Cruz
