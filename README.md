@@ -1,4 +1,5 @@
 AI Document Agent – Hybrid LLM + Reasoning System
+
 Overview
 
 This project is a prototype AI system designed to answer questions from complex technical documents.
@@ -30,6 +31,7 @@ Triggers prompt refinement when needed
 Uses a simple reinforcement learning (RL) mechanism
 Tracks which prompting strategies perform better
 Adjusts prompts over time
+
 Example
 
 Question:
@@ -44,17 +46,16 @@ Answer:
 D5-P5336 has the largest capacity (61TB)
 
 Architecture
-User Query
-    ↓
-Retriever (RAG)
-    ↓
-Agent
- ├── Structured Reasoning (tables, numeric logic)
- ├── Prompt Selection (RL-based)
- ├── LLM Generation
- └── Hallucination Detection
-    ↓
-Final Answer
+
+- User asks a question  
+- System retrieves relevant document sections (RAG)  
+- Agent processes the query:
+  - Uses structured reasoning for tables and numeric data  
+  - Uses an LLM for language understanding  
+  - Applies prompt optimization  
+  - Checks for hallucinations  
+- Final answer is returned to the user
+
 Why This Approach?
 
 LLMs alone can:
@@ -67,16 +68,19 @@ This system improves reliability by:
 combining deterministic logic with LLMs
 grounding responses in retrieved documents
 validating outputs before returning them
+
 Tech Stack
 Python
 Hugging Face Transformers
 Sentence Transformers (embeddings)
 PDF parsing (pdfplumber)
+
 Future Improvements
 Stronger LLM integration
 Improved hallucination detection
 Scalable deployment (API / service architecture)
 Better evaluation metrics
+
 Author
 
 Hugo Lin
